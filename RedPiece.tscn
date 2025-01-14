@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://b4vdc5wuq524v"]
+
+[ext_resource type="Texture2D" uid="uid://5kckgg1cs2vl" path="res://connectFourToken2.png" id="1_pnfr7"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ConnectFourToken2" type="Sprite2D" parent="."]
+position = Vector2(-4, -7)
+texture = ExtResource("1_pnfr7")

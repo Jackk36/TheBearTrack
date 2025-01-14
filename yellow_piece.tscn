@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://ccppmwk66a86a"]
+
+[ext_resource type="Texture2D" uid="uid://ylcpoyh20ryh" path="res://yellowConnectFourToken.png" id="1_p0two"]
+
+[node name="yellow_piece" type="Sprite2D"]
+position = Vector2(-3.8147e-06, 3)
+scale = Vector2(0.870445, 0.801653)
+texture = ExtResource("1_p0two")

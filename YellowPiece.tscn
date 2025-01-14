@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://uipslvg4t6aw"]
+
+[ext_resource type="Script" path="res://connect4.gd" id="1_moxaw"]
+[ext_resource type="PackedScene" uid="uid://ccppmwk66a86a" path="res://yellow_piece.tscn" id="2_fsj4i"]
+[ext_resource type="PackedScene" uid="uid://d0tlkkknh3dya" path="res://red_piece.tscn" id="3_x5aul"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_moxaw")
+
+[node name="yellow_piece" parent="." instance=ExtResource("2_fsj4i")]
+
+[node name="RedPiece_tscn" parent="." instance=ExtResource("3_x5aul")]

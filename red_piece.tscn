@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0tlkkknh3dya"]
+
+[ext_resource type="Texture2D" uid="uid://5kckgg1cs2vl" path="res://connectFourToken2.png" id="1_nd1xs"]
+
+[node name="RedPiece_tscn" type="Sprite2D"]
+texture = ExtResource("1_nd1xs")

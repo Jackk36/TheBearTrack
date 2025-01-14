@@ -1,0 +1,100 @@
+[gd_scene load_steps=10 format=3 uid="uid://cl8n77aep78gp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_djnga"]
+albedo_color = Color(0.784314, 0.588235, 0.196078, 1)
+roughness = 0.5
+
+[sub_resource type="SphereMesh" id="SphereMesh_3md17"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_yfey7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3hcni"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8haic"]
+albedo_color = Color(1, 0.686275, 0.196078, 1)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_l8u25"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_d6t8c"]
+friction = 0.33
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_04f8r"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rvlqn"]
+margin = 0.0
+size = Vector3(100, 2, 100)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
+transform = Transform3D(-0.647375, 0, -0.762171, 0, 1, 0, 0.762171, 0, -0.647375, -0.113616, 1.49949, 0.37736)
+material_override = SubResource("StandardMaterial3D_djnga")
+mesh = SubResource("SphereMesh_3md17")
+skeleton = NodePath("../..")
+
+[node name="eyes" type="MeshInstance3D" parent="RigidBody3D/MeshInstance3D"]
+transform = Transform3D(-0.130456, 0.0322616, 0.066636, -0.0522659, -0.135753, -0.0365992, 0.0524352, -0.0550493, 0.129306, 0.348279, 0.334768, 0.132663)
+mesh = SubResource("SphereMesh_yfey7")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_3hcni")
+
+[node name="eyes2" type="MeshInstance3D" parent="RigidBody3D/MeshInstance3D"]
+transform = Transform3D(-0.130456, 0.0322616, 0.066636, -0.0522659, -0.135753, -0.0365992, 0.0524352, -0.0550493, 0.129306, 0.138868, 0.371694, 0.323304)
+mesh = SubResource("SphereMesh_yfey7")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_3hcni")
+
+[node name="nose" type="MeshInstance3D" parent="RigidBody3D/MeshInstance3D"]
+transform = Transform3D(-0.458521, 0.00174953, 0.119608, -0.042163, -0.196281, -0.051728, 0.194886, -0.0383486, 0.270219, 0.441429, 0.21892, 0.430766)
+mesh = SubResource("SphereMesh_yfey7")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_3hcni")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D/MeshInstance3D"]
+transform = Transform3D(0.217801, -0.119643, 0.0273489, 0.119643, 0.194572, -0.101623, 0.0273489, 0.101623, 0.22677, 0.340578, 0.244443, -0.289282)
+mesh = SubResource("SphereMesh_yfey7")
+surface_material_override/0 = SubResource("StandardMaterial3D_8haic")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="RigidBody3D/MeshInstance3D"]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="RigidBody3D/MeshInstance3D"]
+transform = Transform3D(-0.161844, 0, -0.190543, 0, 0.25, 0, 0.190543, 0, -0.161844, -0.232167, 0.356954, 0.3172)
+material_override = SubResource("StandardMaterial3D_djnga")
+mesh = SubResource("SphereMesh_3md17")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="RigidBody3D/MeshInstance3D"]
+transform = Transform3D(-0.388425, 0, -0.304869, 0, 0.6, 0, 0.457303, 0, -0.25895, 0.28327, -0.0203111, 0.297498)
+material_override = SubResource("StandardMaterial3D_djnga")
+mesh = SubResource("SphereMesh_3md17")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="RigidBody3D/MeshInstance3D/MeshInstance3D4"]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+shape = SubResource("SphereShape3D_l8u25")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_d6t8c")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+mesh = SubResource("PlaneMesh_04f8r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.149523, 0)
+shape = SubResource("BoxShape3D_rvlqn")
+
+[node name="Node3D" type="Node3D" parent="."]
+transform = Transform3D(-0.976672, -0.0783519, -0.199931, 0, 0.931056, -0.364877, 0.214735, -0.356365, -0.909336, -0.430432, 0.359018, 3.24611)
+rotation_edit_mode = 2
+
+[node name="Camera3D" type="Camera3D" parent="Node3D"]
+transform = Transform3D(0.119599, -0.553579, 0.824164, -0.256308, 0.784767, 0.564311, -0.959168, -0.278731, -0.0480298, 1.45, 3.37868, 2.21568)
+h_offset = 7.0
+fov = 109.688
