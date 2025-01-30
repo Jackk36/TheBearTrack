@@ -14,3 +14,7 @@ config/name="Tutorial2"
 run/main_scene="res://Main.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[filesystem]
+
+import/blender/enabled=false
